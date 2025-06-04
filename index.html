@@ -1,0 +1,227 @@
+!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Üyelikli Resim Galerisi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-container">
+    <h2>Üye Girişi</h2>
+    <input type="text" id="username" placeholder="Kullanıcı Adı" />
+    <input type="password" id="password" placeholder="Şifre" />
+    <button onclick="login()">Giriş Yap</button>
+    <p class="info">Şifre alabilmek için <strong>ahmetmertevci@gmail.com</strong> adresine yazın.</p>
+  </div>
+
+  <div id="gallery-container" class="hidden">
+    <h1>Üyelikli Resim Galerisi</h1>
+    <button class="logout" onclick="logout()">Çıkış Yap</button>
+    <div class="gallery">
+
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg" alt="Resim 1">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1001682/pexels-photo-1001682.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/15286/pexels-photo-15286.jpeg" alt="Resim 2">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/15286/pexels-photo-15286.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg" alt="Resim 3">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/210186/pexels-photo-210186.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/34950/pexels-photo-34950.jpeg" alt="Resim 4">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/34950/pexels-photo-34950.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg" alt="Resim 5">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/459225/pexels-photo-459225.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg" alt="Resim 6">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg" alt="Resim 7">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/302743/pexels-photo-302743.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg" alt="Resim 8">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg" alt="Resim 9">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/417173/pexels-photo-417173.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/459828/pexels-photo-459828.jpeg" alt="Resim 10">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/459828/pexels-photo-459828.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg" alt="Resim 11">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg" alt="Resim 12">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1236701/pexels-photo-1236701.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg" alt="Resim 13">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/325185/pexels-photo-325185.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg" alt="Resim 14">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1680173/pexels-photo-1680173.jpeg" alt="Resim 15">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1680173/pexels-photo-1680173.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/2526028/pexels-photo-2526028.jpeg" alt="Resim 16">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/2526028/pexels-photo-2526028.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/242246/pexels-photo-242246.jpeg" alt="Resim 17">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/242246/pexels-photo-242246.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg" alt="Resim 18">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/167699/pexels-photo-167699.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg" alt="Resim 19">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/356378/pexels-photo-356378.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/459451/pexels-photo-459451.jpeg" alt="Resim 20">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/459451/pexels-photo-459451.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg" alt="Resim 21">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/462118/pexels-photo-462118.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg" alt="Resim 22">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/730896/pexels-photo-730896.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1252814/pexels-photo-1252814.jpeg" alt="Resim 23">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1252814/pexels-photo-1252814.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg" alt="Resim 24">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1308881/pexels-photo-1308881.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg" alt="Resim 25">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/2775196/pexels-photo-2775196.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg" alt="Resim 26">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1533720/pexels-photo-1533720.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg" alt="Resim 27">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/132037/pexels-photo-132037.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg" alt="Resim 28">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg" alt="Resim 29">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/712786/pexels-photo-712786.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1226302/pexels-photo-1226302.jpeg" alt="Resim 30">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1226302/pexels-photo-1226302.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg" alt="Resim 31">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg" alt="Resim 32">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/91224/pexels-photo-91224.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg" alt="Resim 33">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/100582/pexels-photo-100582.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1553963/pexels-photo-1553963.jpeg" alt="Resim 34">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1553963/pexels-photo-1553963.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/240040/pexels-photo-240040.jpeg" alt="Resim 35">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/240040/pexels-photo-240040.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg" alt="Resim 36">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/167964/pexels-photo-167964.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg" alt="Resim 37">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/2088170/pexels-photo-2088170.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/1630777/pexels-photo-1630777.jpeg" alt="Resim 38">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/1630777/pexels-photo-1630777.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/2179483/pexels-photo-2179483.jpeg" alt="Resim 39">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/2179483/pexels-photo-2179483.jpeg')">İndir</button>
+      </div>
+    
+      <div class="image-card">
+        <img src="https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg" alt="Resim 40">
+        <button class="download-btn" onclick="downloadImage('https://images.pexels.com/photos/257360/pexels-photo-257360.jpeg')">İndir</button>
+      </div>
+    
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
